@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asad zoho sprints workflow Flowchart</title>
+  <style>
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ensure the content starts from the top */
+    align-items: center; /* Center align content horizontally */
+    min-height: 100vh; /* Full viewport height */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%; /* Ensure the header takes up full width */
+}
+
+h1 {
+    font-size: 2rem; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+main {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    flex-grow: 1; /* Allow the main section to take up remaining space */
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 20px;
+}
+
+/* Styling the tree */
+.tree {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 80%; /* Set a maximum width for the flowchart */
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+}
+
+.tree ul {
+    margin-left: 20px;
+    list-style: none;
+    display: none; /* Hide subtopics initially */
+}
+
+.tree li {
+    cursor: pointer;
+    margin: 5px 0;
+    position: relative;
+}
+
+.tree li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 10px;
+    height: 1px;
+    background: #000;
+}
+
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 1px;
+    height: 100%;
+    background: #000;
+}
+
+.tree li:last-child::after {
+    height: 10px;
+}
+
+.tree li span {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    background: #f4f4f4;
+    display: inline-block;
+}
+
+.tree li span:hover {
+    background: #ddd;
+}
+
+.tree li span.active {
+    background: #b0e57c; /* Highlight selected topics */
+}
+ /* Image Styling */
+    .topic-image {
+        max-width: 700px;
+        max-height: 700px;
+        display: block;
+        margin: 10px auto;
+    }
+
+  </style>
+  </head>
+  <body>
+    <header>
+        <h1>Asad zoho sprints workflow</h1>
+    </header>
+
+  </body>
+</head>
+<body>
+
+
+<h1></h1>
+<ul class="tree">
+  <li>
+    <span onclick="toggleSubtopics(this)">Backlog</span>
+    <ul>
+        <li>
+            <span onclick="toggleSubtopics(this)">Backlog</span>
+            <ul>
+              <li><span>The Backlog is a central repository where all user stories, tasks, bugs, 
+                and other work items are collected. 
+                It serves as a pipeline for future sprints.</span></li>
+                <img src=https://www.zohowebstatic.com/sites/zweb/images/sprints/seo/backlog-manage-using-zoho-sprints.jpg class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+      <li>
+        <span onclick="toggleSubtopics(this)">Work Items</span>
+        <ul>
+            <li>
+                <span onclick="toggleSubtopics(this)">Work Items image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsna8fa6da6f6a2411479593bef95099f74ce8d3b654149bfb7718bec310a5db441e1011ef5bbaa874b0d0818dfccd79084?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+          <li><span>User Stories: A feature or functionality that provides value to the user.</span></li>
+          <li>
+            <span onclick="toggleSubtopics(this)">User Stories image</span>
+            <ul>
+                <img src=https://www.zohowebstatic.com/sites/zweb/images/sprints/seo/sb-browser.png class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+          <li><span>Tasks: Smaller, actionable items within a story.</span></li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Tasks image</span>
+            <ul>
+                <img src=https://desk.zoho.com/support/ImageDisplay?downloadType=uploadedFile&fileName=1721652375636.png&blockId=edbsne0706dd43488e78737f6d54b1d5f7eba557ed25fbbeb23ceafdcd7ab348a543b&zgId=edbsn7709df772cce2825696f51e4f4f5fe02&mode=view class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+          <li><span>Bugs: Issues reported that need fixing.</span></li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Bugs image</span>
+            <ul>
+                <img src=https://desk.zoho.com/support/ImageDisplay?downloadType=uploadedFile&fileName=1646123751144.png&blockId=48d0a45894056572c0408831d2f3f09529fa81b69eacb037&zgId=b54d79c69095249d&mode=view class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+          
+        </ul>
+      </li>
+      <li>
+        <span onclick="toggleSubtopics(this)">Prioritization</span>
+        <ul>
+          <li><span>Items in the backlog are organized based on priority, often using the MoSCoW method (Must-have, Should-have, Could-have, Won’t-have).</span></li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Prioritization image</span>
+            <ul>
+                <img src=https://www.zohowebstatic.com/sites/zweb/images/sprints/features/backlog-product.png class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span onclick="toggleSubtopics(this)">Estimation</span>
+        <ul>
+          <li><span>Assign story points or time estimates to each work item to gauge the effort required.</span></li>
+        </ul>
+      </li>
+      <li>
+        <span onclick="toggleSubtopics(this)">Sprint Planning</span>
+        <ul>
+          <li><span>Select items from the backlog to include in the next sprint based on team capacity and priority.</span></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <span onclick="toggleSubtopics(this)">Epics</span>
+    <ul>
+        <li>
+            <span onclick="toggleSubtopics(this)">Epics</span>
+            <ul>
+              <li><span>Epics are large bodies of work that can be broken down into smaller user stories or tasks. 
+                They represent a significant objective or deliverable.
+              </span></li>
+              <img src=https://help.zoho.com/galleryDocuments/edbsn55093654ce9f38d22ef56c0d33dd984bf06db2268f445971d93e9f6449851dd841942855392026ceeaa4ef20334061fb?inline=true class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+        <li>
+            <span onclick="toggleSubtopics(this)">Creating Epics</span>
+            <ul>
+              <li><span>Define the overarching goal or feature and link smaller work items to the epic.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Creating Epics image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsn55093654ce9f38d22ef56c0d33dd984bf06db2268f445971d93e9f6449851dd841942855392026ceeaa4ef20334061fb?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Linking Work Items</span>
+            <ul>
+              <li><span>Associate user stories, tasks, and bugs with a specific epic to track its progress.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Linking Work Items image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsna8fa6da6f6a2411479593bef95099f74ce8d3b654149bfb7718bec310a5db441e1011ef5bbaa874b0d0818dfccd79084?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+              
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Progress Tracking</span>
+            <ul>
+              <li><span>Use burn-up or burn-down charts to see how much of the epic has been completed.
+              </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Epic States</span>
+            <ul>
+              <li><span>Epics can have different statuses like To Do, In Progress, and Done, showing the current state of the work.
+              </span></li>
+            </ul>
+          </li>
+    </ul>
+  </li>
+  <li>
+    <span onclick="toggleSubtopics(this)">Release</span>
+    <ul>
+        <li>
+            <span onclick="toggleSubtopics(this)">Release</span>
+            <ul>
+              <li><span>A Release represents a version or milestone in the project where a set of deliverables is completed and delivered to stakeholders or customers.
+              </span></li>
+              <img src=https://help.zoho.com/galleryDocuments/edbsnc8715fdbfadc7b568f3ef77cb4c4e56f2b10146abcd17b870745af024d738f64059f320eac1b4431b1b86a598c2a9c07?inline=true class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+        <li>
+            <span onclick="toggleSubtopics(this)">Creating a Release</span>
+            <ul>
+              <li><span>Define the release scope, target date, and the work items included in that release.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Creating a Release image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsn50ec276c2c4be70138278e1fb04def1a186f6907fb7548df93c60721ebb7b9fb687cb856b35b2e309d620b42ec76f744?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Release Planning</span>
+            <ul>
+              <li><span>Prioritize features or fixes to be included in the release based on the timeline and dependencies.
+              </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Release Notes</span>
+            <ul>
+              <li><span> Summarize the changes, enhancements, and bug fixes included in the release for stakeholders.
+              </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Release Tracking</span>
+            <ul>
+              <li><span> Monitor the progress of items assigned to the release to ensure timely delivery.
+              </span></li>
+            </ul>
+          </li>
+    </ul>
+  </li>
+  <li>
+    <span onclick="toggleSubtopics(this)">Board</span>
+    <ul>
+        <li>
+            <span onclick="toggleSubtopics(this)">Board</span>
+            <ul>
+              <li><span> The Board provides a visual representation of the sprint progress, organized into columns (like Kanban). Each column represents a stage of the workflow.
+              </span></li>
+              <img src=https://www.zohowebstatic.com/sites/zweb/images/sprints/features/agile-scrum-board-header-scrum.png class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+        <li>
+            <span onclick="toggleSubtopics(this)">Swimlanes</span>
+            <ul>
+              <li><span> Group tasks or work items based on criteria like priority, assignee, or type.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Swimlanes image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsnfc55eac46eb657910e80530a8033d211ea821b001037ef343af0f8a8a67098c8507d32ccc1b159111c27faf8939269a6?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <span onclick="toggleSubtopics(this)">Workflow Stages</span>
+            <ul>
+              <li><span> Define stages such as To Do, In Progress, Testing, and Done to track the status of each task.
+              </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Card Management</span>
+            <ul>
+              <li><span>Each work item is represented as a card that can be moved across stages. 
+                Add labels, comments, or attachments for better context.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Card Management Image/span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsn3749bc847592fd0086c4f6e518156df8302bda140e7a4ecab297b20e1e4e9ccbd08f35f0cf7fa4547900f251e6d77958?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">WIP Limits</span>
+            <ul>
+              <li><span>Set limits on the number of tasks in a particular stage to avoid bottlenecks.
+              </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Filtering & Sorting</span>
+            <ul>
+              <li><span>Filter tasks by criteria like assignee, priority, or labels for focused views.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Filtering & Sorting Image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsn3749bc847592fd0086c4f6e518156df8302bda140e7a4ecab297b20e1e4e9ccbd08f35f0cf7fa4547900f251e6d77958?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+    </ul>
+  </li>
+  <li>
+    <span onclick="toggleSubtopics(this)">Reports</span>
+    <ul>
+        <li>
+            <span onclick="toggleSubtopics(this)">Reports</span>
+            <ul>
+              <li><span>Reports provide insights into the performance and progress of the team, helping with retrospectives and decision-making.
+              </span></li>
+              <img src=https://help.zoho.com/galleryDocuments/edbsn56980ed0aee528da093b58b1a68dca3cdf83c4e3cea8c145053f0b7c6c795b00b56ad1df5a33b723ee9a1c5c75c2bd72?inline=true class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+        <li>
+            <span onclick="toggleSubtopics(this)">Sprint Reports</span>
+            <ul>
+              <li><span>Analyze the performance of a specific sprint with metrics like velocity, completed vs. 
+                planned work, and burndown charts.
+              </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Velocity Charts</span>
+            <ul>
+              <li><span>Visualize the amount of work completed in each sprint to identify team capacity trends.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Velocity Charts Image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsna34301074ce02de4673589a910795c6ff59558bdc6c85fcb3f3216ed9fa5af64f55d36085e37662cd15e9e674c4110b0?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">VBurn-Down & Burn-Up Charts</span>
+            <ul>
+              <li><span>Track progress over time and measure the work left to complete.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">VBurn-Down & Burn-Up Charts Image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsn68fa9fec29544139539288309e3ae8a7eec40973817f59438b5d7086a9dab375e157836d9a5210ce055b2817c1995528?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Cumulative Flow Diagram</span>
+            <ul>
+              <li><span>Show the distribution of tasks across workflow stages to identify bottlenecks.
+              </span></li>
+              <li>
+                <span onclick="toggleSubtopics(this)">Cumulative Flow Diagram Image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsn851fa6820ff2e498387e492f5610e61bfca4761e538b192adf4f34b1fd4721d4f6ef48886751a446341179687a564545?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Custom Reports</span>
+            <ul>
+              <li><span>Create tailored reports to address specific needs like work item aging or time tracking.
+              </span></li>
+            </ul>
+          </li>
+    </ul>
+  </li>
+  <li>
+    <span onclick="toggleSubtopics(this)">Timesheet</span>
+    <ul>
+        <li>
+            <span onclick="toggleSubtopics(this)">Timesheet</span>
+            <ul>
+              <li><span>The Timesheet module helps track the time spent on tasks by team members, providing transparency and accountability.
+            </span></li>
+            <img src=https://help.zoho.com/galleryDocuments/edbsn39d53525d03ad9cfd3d92e4b454e9f2b22217db1b5aa6c6397b13b27adcd0eeb7c43932a5894720a761c6d2289ea05d7?inline=true class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+          <li>
+        <li>
+            <span onclick="toggleSubtopics(this)">Logging Hours</span>
+            <ul>
+              <li><span>Team members can log the time they’ve spent on specific tasks or work items.
+            </span></li>
+            <li>
+                <span onclick="toggleSubtopics(this)">Logging Hours Image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsn92e0c1daeffb93e3d619e59042a5daaef5f91c9dced41e7c824fb43d07810431085627ae9b046b206a717b6f1c19f494?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Timesheet Approvals</span>
+            <ul>
+              <li><span>Managers can review and approve submitted timesheets.
+            </span></li>
+            <li>
+                <span onclick="toggleSubtopics(this)">Timesheet Approvals Image</span>
+                <ul>
+                    <img src=https://help.zoho.com/galleryDocuments/edbsne9b986b1ada3d25fb3b1c28e325dc9e9fe2fd4bd4875c4e6f560d46301ca684c88bc6c26e8062a993e4f94671c2fc47e?inline=true class="topic-image" alt="Backlog">
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Time Analysis</span>
+            <ul>
+              <li><span>Reports show how much time was spent on tasks, helping to optimize future estimates.
+            </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Integration with Billing</span>
+            <ul>
+              <li><span>For billable projects, link timesheets to invoices or billing systems.
+            </span></li>
+            </ul>
+          </li>
+    </ul>
+  </li>
+  <li>
+    <span onclick="toggleSubtopics(this)">Meetings</span>
+    <ul>
+        <li>
+            <span onclick="toggleSubtopics(this)">Meetings</span>
+            <ul>
+              <li><span>The Meetings module facilitates agile ceremonies such as stand-ups, sprint reviews, and retrospectives within Zoho Sprints.
+            </span></li>
+            <img src=https://www.zohowebstatic.com/sites/zweb/images/sprints/features/organize.png class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+        <li>
+            <span onclick="toggleSubtopics(this)">Daily Stand-ups</span>
+            <ul>
+              <li><span>Record what team members did yesterday, what they plan to do today, and any blockers.
+            </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Sprint Planning</span>
+            <ul>
+              <li><span>Schedule meetings to discuss and finalize items to include in the next sprint.
+            </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Retrospectives</span>
+            <ul>
+              <li><span>Conduct sessions to reflect on the sprint’s success and identify areas for improvement.
+            </span></li>
+            </ul>
+          </li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Meeting Notes</span>
+            <ul>
+              <li><span>Document the key points and action items discussed during meetings.
+            </span></li>
+            </ul>
+          </li>
+          li>
+          <span onclick="toggleSubtopics(this)">Integration with Calendar</span>
+          <ul>
+            <li><span>Sync meetings with external calendars like Google Calendar for better collaboration.
+          </span></li>
+          <li>
+            <span onclick="toggleSubtopics(this)">Integration with Calendar Image</span>
+            <ul>
+                <img src=https://blog.zohowebstatic.com/sites/zblogs/images/sprints/zoho-meeting-zoho-sprints-2021-01.png class="topic-image" alt="Backlog">
+            </ul>
+          </li>
+          </ul>
+        </li>
+    </ul>
+  </li>
+</ul>
+
+<script>
+  function toggleSubtopics(element) {
+    // Find the next sibling <ul> of the clicked <span>
+    const subtopics = element.nextElementSibling;
+
+    if (subtopics) {
+      // Toggle visibility
+      const isVisible = subtopics.style.display === 'block';
+      subtopics.style.display = isVisible ? 'none' : 'block';
+
+      // Add or remove active class
+      if (isVisible) {
+        element.classList.remove('active');
+      } else {
+        element.classList.add('active');
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
